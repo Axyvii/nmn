@@ -6,8 +6,8 @@ const { token } = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 // once bot is ready
-client.once(Events.ClientReady, c => {
-	console.log('Bot is up! Logged in as ${c.user.tag}');
+client.once(Events.ClientReady, () => {
+	console.log('Bot is up!');
 });
 
 client.login(token);
